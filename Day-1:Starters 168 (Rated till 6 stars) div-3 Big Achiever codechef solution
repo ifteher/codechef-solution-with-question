@@ -191,3 +191,34 @@ Student
 
 
 Solution:
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+int t;
+cin>>t;
+while(t--)
+{
+    int n,cnt=INT_MIN;
+    cin>>n;
+    vector<int>v(n),ans;
+    for(int i=0;i<n;i++)
+    {
+        cin>>v[i];
+    }
+    for(int i=0;i<n;i++)
+    { 
+     if(v[i]>cnt)
+     {
+        cout<<1<<' ';
+     }
+     else 
+     {
+        cout<<0<<' ';
+     }
+        cnt=max(cnt,v[i]);
+    }
+    cout<<endl;
+}
+}
+
